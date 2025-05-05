@@ -1,0 +1,663 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usetheme{Madrid}
+
+\title{Non-parametric Estimation of Causal Effects on \\ Spatially Clustered Survival Data}
+\author{Durbadal Ghosh}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+
+\section{Motivating Dataset and Research Context}
+
+\begin{frame}{Florida Cancer Registry Dataset}
+\begin{itemize}
+    \item \textbf{Data Structure:} 
+    \begin{itemize}
+        \item 76,106 breast cancer patients across 67 Florida counties
+        \item Spatial clustering at county level
+        \item Survival outcome: Time to death (right censored)
+    \end{itemize}
+    \item \textbf{Research Context:}
+    \begin{itemize}
+        \item Investigate causal effects of treatment delays on survival
+        \item Need to account for patient-level covariates and county-level effects
+        \item Challenge: Properly estimating treatment effects while accounting for spatial clustering
+    \end{itemize}
+    \item \textbf{Methodological Need:}
+    \begin{itemize}
+        \item Non-parametric approach to capture complex relationships
+        \item Framework that handles clustering, censoring, and causal inference simultaneously
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Why Clustering is Important in Causal Context}
+\begin{itemize}
+    \item \textbf{Within-Cluster Homogeneity:} 
+    \begin{itemize}
+        \item Subjects in the same cluster share unobserved factors
+        \item Ignoring this can lead to confounding and biased treatment effect estimates
+        \item \textit{Reference:} Imbens \& Rubin (2015); Wooldridge (2010)
+    \end{itemize}
+    \item \textbf{Accurate Uncertainty Quantification:}
+    \begin{itemize}
+        \item Independence assumptions fail within clusters
+        \item Without adjustment, standard errors are underestimated
+        \item \textit{Reference:} Abadie et al. (2017); Gelman \& Hill (2007)
+    \end{itemize}
+    \item \textbf{Heterogeneous Treatment Effects:}
+    \begin{itemize}
+        \item Treatment effects often vary across clusters
+        \item Clustered analysis enables discovery of effect heterogeneity
+        \item \textit{Reference:} Wager \& Athey (2018); Hill (2011)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Why Spatial Clustering is Important in Causal Inference}
+\begin{itemize}
+    \item \textbf{Spatial Autocorrelation:}
+    \begin{itemize}
+        \item Outcomes for spatially proximate observations are correlated
+        \item Ignoring spatial dependency leads to biased causal estimates
+        \item \textit{Reference:} Anselin (1995); Tobler's First Law of Geography
+    \end{itemize}
+    \item \textbf{Unmeasured Spatial Confounders:}
+    \begin{itemize}
+        \item Geographic proximity implies shared environmental exposures
+        \item Spatial models capture unobserved area-level confounding
+        \item \textit{Reference:} Reich et al. (2021); Schnell \& Papadogeorgou (2019)
+    \end{itemize}
+    \item \textbf{Geographic Variation in Treatment Effects:}
+    \begin{itemize}
+        \item Treatment efficacy often varies geographically
+        \item Spatial models reveal location-specific effects
+        \item \textit{Reference:} Linero (2020); Papadogeorgou et al. (2018)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Why BART in Causal Inference}
+\begin{itemize}
+    \item \textbf{Flexibility:}
+    \begin{itemize}
+        \item Sum-of-trees model captures complex relationships without parametric assumptions
+        \item Automatically handles nonlinearities and interactions
+        \item \textit{Reference:} Chipman et al. (2010); Hill (2011)
+    \end{itemize}
+    \item \textbf{Uncertainty Quantification:}
+    \begin{itemize}
+        \item Bayesian framework provides natural uncertainty intervals
+        \item Direct posterior inference on causal effects
+        \item \textit{Reference:} Hahn et al. (2020); Dorie et al. (2019)
+    \end{itemize}
+    \item \textbf{Empirical Performance:}
+    \begin{itemize}
+        \item Consistently outperforms other methods in causal inference challenges
+        \item Robustness to model misspecification
+        \item \textit{Reference:} Hill \& Su (2013); Carnegie et al. (2019)
+    \end{itemize}
+    \item \textbf{SoftBART Extension:}
+    \begin{itemize}
+        \item Introduces smoothness to predictions
+        \item Particularly valuable for survival outcomes
+        \item \textit{Reference:} Linero \& Yang (2018)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Why Two-Stage Method}
+\begin{itemize}
+    \item \textbf{Addresses Confounding:}
+    \begin{itemize}
+        \item First stage: Estimate propensity scores using BART
+        \item Second stage: Incorporate propensity scores in outcome model
+        \item \textit{Reference:} Hill \& Su (2013); Zigler et al. (2013)
+    \end{itemize}
+    \item \textbf{Double Robustness:}
+    \begin{itemize}
+        \item Consistent estimates if either propensity or outcome model is correct
+        \item Protects against misspecification of either model
+        \item \textit{Reference:} Kennedy (2020); Kang \& Schafer (2007)
+    \end{itemize}
+    \item \textbf{Computational Efficiency:}
+    \begin{itemize}
+        \item Avoids feedback between outcome and treatment models
+        \item Manageable with complex, high-dimensional data
+        \item \textit{Reference:} Hahn et al. (2020); Zeldow et al. (2019)
+    \end{itemize}
+    \item \textbf{Mitigates Prior Dogmatism:}
+    \begin{itemize}
+        \item Reduces bias from regularization-induced confounding
+        \item Particularly important with high-dimensional covariates
+        \item \textit{Reference:} Linero (2023); Hahn et al. (2018)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Our Contribution: SoftBART for Causal Inference with Spatially Clustered Survival Data}
+\begin{itemize}
+    \item \textbf{Novel Integration:} 
+    \begin{itemize}
+        \item First framework combining SoftBART with spatial random effects for causal inference in survival analysis
+        \item Handles right-censored survival data with spatial clustering
+    \end{itemize}
+    \item \textbf{Methodological Advantages:}
+    \begin{itemize}
+        \item Non-parametric modeling of complex treatment-covariate interactions
+        \item Spatial correlation through CAR priors for county-level random effects
+        \item Doubly robust estimation via two-stage procedure
+        \item Full posterior inference on heterogeneous treatment effects
+    \end{itemize}
+    \item \textbf{Practical Impact:}
+    \begin{itemize}
+        \item Guides location-specific treatment interventions
+        \item Quantifies uncertainty in estimated causal effects
+        \item Informs policy decisions at county and state levels
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+\section{Methods}
+
+\begin{frame}{Important Features / Novelties in our method}
+\begin{itemize}
+    \item We implement the \textbf{Two-stage method:} (i) estimate PS $\hat{e}_{ij}$, (ii) plugin $\hat{e}_{ij}$ into the outcome model; Doubly robust
+    \item Non-parametric(mBART) outcome modelling
+    \item Frailty/ Random county effects
+    \item Spatial Association among clusters.
+    
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Notation and Definitions}
+  \begin{itemize}
+    \item Study with \(K\) clusters; cluster \(i\) has \(n_i\) subjects; total \(N=\sum_{i=1}^{K} n_i\).
+    \item Binary Treatment: For each subject \(j\) in cluster \(i\), \(Z_{ij}\in\{0,1\}\).
+    \item For subject \(j\) in cluster \(i\):
+      \begin{itemize}
+        \item Individual covariates: \(\mathbf{X}_{ij}\).
+        \item Failure time: \(T_{ij}\) (possibly right-censored at \(C_{ij}\)).
+        \item Observed outcome: \(y_{ij}=\min(T_{ij}, C_{ij})\) with censoring indicator \(\delta_{ij}=I(T_{ij}<C_{ij})\).
+      \end{itemize}
+    \item Cluster-level covariates: \(\mathbf{V}_i\).
+    \item Counterfactual outcomes: \(T_{ij}(1)\) and \(T_{ij}(0)\) for treatment \(Z_{ij}=1\) and \(Z_{ij}=0\), respectively.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Potential outcomes}
+\begin{itemize}
+\item $\{T_{ij}(1), T_{ij}(0)\}$: potential times
+\item $\{C_{ij}(1), C_{ij}(0)\}$: potential censoring times
+
+
+\item \textbf{Under Consistency, the relation between counterfactual and factual data:} % Third main item
+
+\begin{align*} % Aligned equations
+T_{ij} = Z_{ij} T_{ij}(1) + (1 - Z_{ij}) T_{ij}(0) \\
+C_{ij} = Z_{ij} C_{ij}(1) + (1 - Z_{ij}) C_{ij}(0)
+\end{align*}
+
+%\item \textbf{Causal estimands are functions of the potential outcomes} % Fourth main item
+
+\end{itemize} % End the main list
+\end{frame}
+
+
+% Slide 3: Causal Assumptions
+\begin{frame}{Causal Assumptions}
+  \textbf{(A1) SUTVA:} 
+  For any two subjects $j$ and $j'$ in clusters $i$ and $i'$, with treatment assignments $Z_{ij}$ and $Z_{i'j'}$:
+          \[
+          T_{ij}(Z_{ij}, Z_{i'j'}) = T_{ij}(Z_{ij}, Z_{i'j'}')
+          \]
+  \textbf{(A2) Consistency:} 
+  \[
+  T_{ij} = T_{ij}(1)I(Z_{ij}=1) + T_{ij}(0)I(Z_{ij}=0)
+  \]
+
+  
+  \textbf{(A3) Weak Unconfoundedness:} 
+  \[
+  T_{ij}(z) \perp\!\!\!\perp Z_{ij}\mid \mathbf{X}_{ij},\mathbf{V}_i \quad \text{for } z=0,1
+  \]
+ 
+  
+  \textbf{(A4) Positivity:} The propensity score 
+  \[
+  e(\mathbf{X}_{ij},\mathbf{V}_i)=P(Z_{ij}=1\mid \mathbf{X}_{ij},\mathbf{V}_i)
+  \]
+  is bounded away from 0 and 1.
+
+  
+  \textbf{(A5) Covariate-dependent Censoring:}
+  \[
+  T_{ij}(z) \perp\!\!\!\perp C_{ij}(z)\mid \mathbf{X}_{ij},\mathbf{V}_i,Z_{ij} \quad \text{for } z=0,1.
+  \]
+\end{frame}
+
+
+\begin{frame}{Estimands}
+    \begin{itemize}
+
+\item \textbf{Counterfactual survival functions for $z = 0, 1$} 
+
+\begin{itemize}
+\item $S^{(z)}(t|\mathbf{X},\mathbf{V}) = P(T(z) \ge t | \mathbf{X},\mathbf{V})$
+\item $S^{(z)}(t) = P(T(z) \ge t) = \mathbb{E}_{\mathbf{X},\mathbf{V}}[S^{(z)}(t|\mathbf{X},\mathbf{V})]$
+\end{itemize}
+
+\item \textbf{Survival probability causal effect (SPCE) at $t$ (Mao et al. 2018):} 
+
+\[ \Delta^{SPCE}(t) := S^{(1)}(t) - S^{(0)}(t) \]
+
+
+\item \textbf{Average causal effect (ACE) :} 
+\[\Delta^{ACE} = \mathbb{E}[T(1)] - \mathbb{E}[T(0)] \]
+\item \textbf{Restricted average causal effect (RACE) :}
+\[\Delta^{RACE}(t^*) = \mathbb{E}[\min(T(1), t^*)] - \mathbb{E}[\min(T(0), t^*)] \]
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estimands}
+\begin{itemize}
+    \item \textbf{Conditional survival probability causal effect (CSPCE) at $t$ :} 
+
+\[ \Delta^{CSPCE}(t,\mathbf{X},\mathbf{V}) := S^{(1)}(t,\mathbf{X},\mathbf{V}) - S^{(0)}(t,\mathbf{X},\mathbf{V}) \]
+
+
+\item \textbf{Conditional average causal effect (CACE) :} 
+\[\Delta^{CACE}(\mathbf{X},\mathbf{V}) = \mathbb{E}[T(1)\mid \mathbf{X},\mathbf{V}] - \mathbb{E}[T(0)\mid \mathbf{X},\mathbf{V}] \]
+\item \textbf{Conditional restricted average causal effect (CRACE) :}
+\[\Delta^{CRACE}(t^*,\mathbf{X},\mathbf{V}) = \mathbb{E}[\min(T(1), t^*)\mid \mathbf{X},\mathbf{V}] - \mathbb{E}[\min(T(0), t^*)\mid \mathbf{X},\mathbf{V}] \]
+
+\end{itemize}
+    
+\end{frame}
+
+\subsection{Method}
+\begin{frame}{Model for Propensity Score}
+   
+  $P[Z_{ij}=1\mid \mathbf{X}_{ij},\mathbf{V_i}]=e_{ij}, \quad logit(e_{ij})=g(\mathbf{X}_{ij}),$ where $g(\cdot)\sim BART$
+  
+  
+  
+  \vspace{30pt}
+  \textbf{Two-stage implementation:} (i) estimate PS $\hat{e}_{ij}$, (ii) plug in $\hat{e}_{ij}$ into the survival model. (Doubly Robust)
+  
+  \end{frame}
+
+
+\begin{frame}{The AFT-BART Model with Spatial CAR Prior}
+  \begin{itemize}
+    \item \textbf{Model:} 
+      \[
+      \log T_{ij} = f\Bigl(Z_{ij},\mathbf{X}_{ij},\mathbf{V}_i,\hat{e}(\mathbf{X}_{ij},\mathbf{V}_i)\Bigr) + W_i + \epsilon_{ij},\quad \epsilon_{ij}\sim N(0,\sigma^2).
+      \]
+    \item \textbf{Spatial Random Effects:} 
+      \[
+      p(W\mid \tau^2,\rho) \propto \exp\Bigl\{-\frac{1}{2\tau^2}\,W^\top (D-\rho A)W\Bigr\},
+      \]
+      where \(A\) is the spatial adjacency matrix, \(D\) is diagonal with \(d_{ii}=\sum_{i'}A_{ii'}\), and \(\rho\) is the spatial parameter.
+    \item \textbf{BART:} 
+      \[
+      f(Z_{ij},\mathbf{X}_{ij},\mathbf{V}_i,\hat{e}(\mathbf{X}_{ij},\mathbf{V}_i))=\sum_{h=1}^{H} g(Z_{ij},\mathbf{X}_{ij},\mathbf{V}_i,\hat{e}(\mathbf{X}_{ij},\mathbf{V}_i);\mathcal{T}_h,\mathcal{M}_h).
+      \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Prior Specification}
+  \begin{itemize}
+    \item Error variance: \( \sigma^2 \sim \mathrm{IG}(a_\sigma,b_\sigma) \).
+    \item Spatial variance: \( \sigma_W^2 \sim \mathrm{IG}(a_W,b_W) \).
+    \item Spatial correlations: \(\rho \sim Uniform(\frac{1}{\alpha_{(1)}},\frac{1}{\alpha_{(K)}})\). \(\alpha_{(1)},\alpha_{(K)}\) are the minimum and maximum eigenvalues of \(A\), respectively.
+    \item Function \( f(\cdot) \sim \operatorname{SBART}\)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Observed Data Likelihood}
+  \begin{itemize}
+    \item For each subject \(j\) in cluster \(i\), we observe
+      \[
+      y_{ij} = \min(T_{ij}, C_{ij}), \quad \delta_{ij} = \mathbbm{1}(T_{ij} < C_{ij}).
+      \]
+    \item Define the model mean (on the log-scale) as
+      \[
+      \mu_{ij} = f(Z_{ij}, \mathbf{X}_{ij}, \mathbf{V}_i, \hat{e}(\mathbf{X}_{ij},\mathbf{V}_i)) + W_i.
+      \]
+    \item Then the individual likelihood contribution is
+      \[
+      L_{ij}^{\text{obs}}(\theta) = \left\{ \frac{1}{\sqrt{2\pi\sigma^2}}
+      \exp\!\left[-\frac{(\log y_{ij} - \mu_{ij})^2}{2\sigma^2}\right] \right\}^{\delta_{ij}}
+      \left\{ 1 - \Phi\!\left(\frac{\log y_{ij} - \mu_{ij}}{\sigma}\right) \right\}^{1-\delta_{ij}},
+      \]
+      where \(\Phi(\cdot)\) is the standard normal CDF.
+    \item The full observed-data likelihood is
+      \[
+      L_{\text{obs}}(\theta) = \prod_{i=1}^K \prod_{j=1}^{n_i} L_{ij}^{\text{obs}}(\theta).
+      \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ Data Augmentation}
+  \begin{itemize}
+    %\item \textbf{Priors:} Regularizing priors are assigned to the BART tree structures \(\{\mathcal{T}_h\}\) and terminal node parameters \(\{\mu_{lh}\}\).
+    \item  Define the latent log survival time \( \tilde{y}_{ij}\) as
+      \[
+      \tilde{y}_{ij} =
+      \begin{cases}
+        \operatorname{TruncNormal}\Bigl(\mu_{ij},\sigma^2;\log y_{ij}\Bigr), & \text{if } \delta_{ij}=0, \\[1ex]
+        \log y_{ij}, & \text{if } \delta_{ij}=1.
+      \end{cases}
+      \]
+      Here, \(\operatorname{TruncNormal}(\mu,\sigma^2;a)\) denotes a \(N(\mu,\sigma^2)\) distribution truncated to the interval \((a,\infty)\). The imputed values are used in the complete-data likelihood.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Complete Data Likelihood}
+  \begin{itemize}
+    \item Introduce the latent (complete) log survival times:
+      \[
+      \tilde{y}_{ij} =
+      \begin{cases}
+        \log y_{ij}, & \delta_{ij}=1, \\[1ex]
+        \text{draw from } N(\mu_{ij},\sigma^2) \text{ truncated to } [\log y_{ij},\infty), & \delta_{ij}=0.
+      \end{cases}
+      \]
+    \item With \(\mu_{ij}\) defined as before, the complete-data likelihood is
+      \[
+      L_{\text{complete}}(\theta) = \prod_{i=1}^K \prod_{j=1}^{n_i} \frac{1}{\sqrt{2\pi\sigma^2}}
+      \exp\!\left[-\frac{(\tilde{y}_{ij} - \mu_{ij})^2}{2\sigma^2}\right].
+      \]
+  \end{itemize}
+\end{frame}
+
+
+% Slide: Algorithm 1: A Single Iteration
+\subsection{Method}
+\begin{frame}{Model for Propensity Score}
+   
+  $P[Z_{ij}=1\mid \mathbf{X}_{ij},\mathbf{V_i}]=e_{ij}, \quad logit(e_{ij})=g(\mathbf{X}_{ij}),$ where $g(\cdot)\sim BART$
+  
+  
+  
+  \vspace{30pt}
+  \textbf{Two-stage implementation:} (i) estimate PS $\hat{e}_{ij}$, (ii) plug in $\hat{e}_{ij}$ into the survival model. (Doubly Robust)
+  
+  \end{frame}
+
+
+\begin{frame}{The AFT-BART Model with Spatial CAR Prior}
+  \begin{itemize}
+    \item \textbf{Model:} 
+      \[
+      \log T_{ij} = f\Bigl(Z_{ij},\mathbf{X}_{ij},\mathbf{V}_i,\hat{e}(\mathbf{X}_{ij},\mathbf{V}_i)\Bigr) + W_i + \epsilon_{ij},\quad \epsilon_{ij}\sim N(0,\sigma^2).
+      \]
+    \item \textbf{Spatial Random Effects:} 
+      \[
+      p(W\mid \tau^2,\rho) \propto \exp\Bigl\{-\frac{1}{2\tau^2}\,W^\top (D-\rho A)W\Bigr\},
+      \]
+      where \(A\) is the spatial adjacency matrix, \(D\) is diagonal with \(d_{ii}=\sum_{i'}A_{ii'}\), and \(\rho\) is the spatial parameter.
+    \item \textbf{BART:} 
+      \[
+      f(Z_{ij},\mathbf{X}_{ij},\mathbf{V}_i,\hat{e}(\mathbf{X}_{ij},\mathbf{V}_i))=\sum_{h=1}^{H} g(Z_{ij},\mathbf{X}_{ij},\mathbf{V}_i,\hat{e}(\mathbf{X}_{ij},\mathbf{V}_i);\mathcal{T}_h,\mathcal{M}_h).
+      \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Prior Specification}
+  \begin{itemize}
+    \item Error variance: \( \sigma^2 \sim \mathrm{IG}(a_\sigma,b_\sigma) \).
+    \item Spatial variance: \( \sigma_W^2 \sim \mathrm{IG}(a_W,b_W) \).
+    \item Spatial correlations: \(\rho \sim Uniform(\frac{1}{\alpha_{(1)}},\frac{1}{\alpha_{(K)}})\). \(\alpha_{(1)},\alpha_{(K)}\) are the minimum and maximum eigenvalues of \(A\), respectively.
+    \item Function \( f(\cdot) \sim \operatorname{SBART}\)
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}{Observed Data Likelihood}
+%   \begin{itemize}
+%     \item For each subject \(j\) in cluster \(i\), we observe
+%       \[
+%       y_{ij} = \min(T_{ij}, C_{ij}), \quad \delta_{ij} = \mathbbm{1}(T_{ij} < C_{ij}).
+%       \]
+%     \item Define the model mean (on the log-scale) as
+%       \[
+%       \mu_{ij} = f(Z_{ij}, \mathbf{X}_{ij}, \mathbf{V}_i, \hat{e}(\mathbf{X}_{ij},\mathbf{V}_i)) + W_i.
+%       \]
+%     \item Then the individual likelihood contribution is
+%       \[
+%       L_{ij}^{\text{obs}}(\theta) = \left\{ \frac{1}{\sqrt{2\pi\sigma^2}}
+%       \exp\!\left[-\frac{(\log y_{ij} - \mu_{ij})^2}{2\sigma^2}\right] \right\}^{\delta_{ij}}
+%       \left\{ 1 - \Phi\!\left(\frac{\log y_{ij} - \mu_{ij}}{\sigma}\right) \right\}^{1-\delta_{ij}},
+%       \]
+%       where \(\Phi(\cdot)\) is the standard normal CDF.
+%     \item The full observed-data likelihood is
+%       \[
+%       L_{\text{obs}}(\theta) = \prod_{i=1}^K \prod_{j=1}^{n_i} L_{ij}^{\text{obs}}(\theta).
+%       \]
+%   \end{itemize}
+% \end{frame}
+
+% \begin{frame}{ Data Augmentation}
+%   \begin{itemize}
+%     %\item \textbf{Priors:} Regularizing priors are assigned to the BART tree structures \(\{\mathcal{T}_h\}\) and terminal node parameters \(\{\mu_{lh}\}\).
+%     \item  Define the latent log survival time \( \tilde{y}_{ij}\) as
+%       \[
+%       \tilde{y}_{ij} =
+%       \begin{cases}
+%         \operatorname{TruncNormal}\Bigl(\mu_{ij},\sigma^2;\log y_{ij}\Bigr), & \text{if } \delta_{ij}=0, \\[1ex]
+%         \log y_{ij}, & \text{if } \delta_{ij}=1.
+%       \end{cases}
+%       \]
+%       Here, \(\operatorname{TruncNormal}(\mu,\sigma^2;a)\) denotes a \(N(\mu,\sigma^2)\) distribution truncated to the interval \((a,\infty)\). The imputed values are used in the complete-data likelihood.
+%   \end{itemize}
+% \end{frame}
+
+% \begin{frame}{Complete Data Likelihood}
+%   \begin{itemize}
+%     \item Introduce the latent (complete) log survival times:
+%       \[
+%       \tilde{y}_{ij} =
+%       \begin{cases}
+%         \log y_{ij}, & \delta_{ij}=1, \\[1ex]
+%         \text{draw from } N(\mu_{ij},\sigma^2) \text{ truncated to } [\log y_{ij},\infty), & \delta_{ij}=0.
+%       \end{cases}
+%       \]
+%     \item With \(\mu_{ij}\) defined as before, the complete-data likelihood is
+%       \[
+%       L_{\text{complete}}(\theta) = \prod_{i=1}^K \prod_{j=1}^{n_i} \frac{1}{\sqrt{2\pi\sigma^2}}
+%       \exp\!\left[-\frac{(\tilde{y}_{ij} - \mu_{ij})^2}{2\sigma^2}\right].
+%       \]
+%   \end{itemize}
+% \end{frame}
+
+
+% % Slide: Algorithm 1: A Single Iteration
+% \begin{frame}{Algorithm 1: A Single Iteration}
+%   \begin{enumerate}
+%     \item \textbf{Update Spatial Random Effects \& Variance:} Update \(W\), \(\tau^2\), and \(\rho\) from their full conditionals based on the CAR prior.
+    
+%     \item \textbf{Impute Censored Data:} For subjects $ij$, sample the latent log survival time as
+%       \[
+%       \tilde{y}_{ij} =
+%       \begin{cases}
+%         \operatorname{TruncNormal}\Bigl(\mu_{ij},\sigma^2;\log y_{ij}\Bigr), & \text{if } \Delta_{ij}=0, \\[1ex]
+%         \log y_{ij}, & \text{if } \Delta_{ij}=1.
+%       \end{cases}
+%       \]
+%     \item \textbf{Update BART:} With responses \(\tilde{y}_{ij} - W_i\) and covariates \((z_{ij},\mathbf{x}_{ij})\), update the BART parameters \(\{\mathcal{T}_h,\mathcal{M}_h\}\) and the error variance \(\sigma^2\) via Bayesian backfitting.
+    
+%   \end{enumerate}
+% \end{frame}
+ 
+\section{Simulation}
+
+\begin{frame}{Simulation : Data Generation (Model Corretly Specified)}
+    \begin{itemize}
+      \item \textbf{Subjects:} \(n = 3000\) observations.
+      \item \textbf{Covariates:} Two confounders:
+        \[
+        X_1, X_2 \sim U(0,1).
+        \]
+      \item \textbf{Clusters:} \(K = 15\) clusters, with subjects randomly assigned.
+    \end{itemize}
+  \end{frame}
+      
+  
+  \begin{frame}{Treatment Assignment}
+    \begin{itemize}
+      \item \textbf{Propensity Score:}
+        \[
+        p = \text{expit}\Bigl(0.3X_1 - 0.2X_2 + 0.5X_1X_2\Bigr),
+        \]
+        where \(\text{expit}(x)=\frac{1}{1+e^{-x}}\).
+      \item \textbf{Treatment:} \(Z \sim \text{Bernoulli}(p)\).
+      \item \textbf{Note:} Treatment assignment depends on the confounders.
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Spatial Structure and CAR Random Effects}
+    \begin{itemize}
+      \item \textbf{Adjacency:} A structure for \(K=15\) clusters: Based on 10 Florida counties in the Western region.
+      \item \textbf{CAR Prior:}
+        \[
+        p(\mathbf{W}\mid\sigma^2_W,\rho) \propto |Q(\rho)|^{1/2}\exp\Bigl\{-\frac{1}{2\sigma^2_W}\mathbf{W}^\top Q(\rho)\mathbf{W}\Bigr\},
+        \]
+        where
+        \[
+        Q(\rho)=D-\rho A,\quad D_{ii}=\sum_j A_{ij}.
+        \]
+      \item \textbf{Generation:} Cluster effects are drawn from a multivariate normal with covariance \(\sigma^2_W Q(\rho)^{-1}\).
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Outcome Model and Censoring}
+    \begin{itemize}
+      \item \textbf{True Outcome Model (log-scale):}
+        \[
+        \log T = f(X,Z) + W + \varepsilon,\quad \varepsilon\sim N(0,\sigma^2).
+        \]
+      \item \textbf{True Function:}
+        \[
+        f(X,Z) = \sin(\pi X_1) + \ln(1+X_2^2) + 2Z\,(X_1X_2) + (X_1^2)Z.
+        \]
+
+      \item \textbf{Censoring:} 
+        \begin{itemize}
+          \item Censoring times \(C \sim \text{Exponential}(\lambda_c)\) (e.g., \(\lambda_c=0.05\)).
+          \item Observed time: \(y = \min(T, C)\) and indicator \(\delta = I(T\le C)\).
+        \end{itemize}
+    \end{itemize}
+  \end{frame}
+  
+
+ 
+
+\begin{frame}{Simulation : Data Generation (Model Misspecified)}
+    \begin{itemize}
+      \item \textbf{Subjects:} \(n = 3000\) observations.
+      \item \textbf{Covariates:} Two confounders:
+        \[
+        X_1, X_2 \sim U(0,1).
+        \]
+      \item \textbf{Clusters:} \(K = 15\) clusters, with subjects randomly assigned.
+    \end{itemize}
+  \end{frame}
+      
+  
+  \begin{frame}{Treatment Assignment}
+    \begin{itemize}
+      \item \textbf{Propensity Score:}
+        \[
+        p = \text{expit}\Bigl(0.3X_1 - 0.2X_2 + 0.5X_1X_2\Bigr),
+        \]
+        where \(\text{expit}(x)=\frac{1}{1+e^{-x}}\).
+      \item \textbf{Treatment:} \(Z \sim \text{Bernoulli}(p)\).
+      \item \textbf{Note:} Treatment assignment depends on the confounders.
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Spatial Structure and CAR Random Effects}
+    \begin{itemize}
+      \item \textbf{Adjacency:} A structure for \(K=15\) clusters: Based on 10 Florida counties in the Western region.
+      \item \textbf{CAR Prior:}
+        \[
+        p(\mathbf{W}\mid\sigma^2_W,\rho) \propto |Q(\rho)|^{1/2}\exp\Bigl\{-\frac{1}{2\sigma^2_W}\mathbf{W}^\top Q(\rho)\mathbf{W}\Bigr\},
+        \]
+        where
+        \[
+        Q(\rho)=D-\rho A,\quad D_{ii}=\sum_j A_{ij}.
+        \]
+      \item \textbf{Generation:} Cluster effects are drawn from a multivariate normal with covariance \(\sigma^2_W Q(\rho)^{-1}\).
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Outcome Model and Censoring}
+    \begin{itemize}
+      \item \textbf{True Outcome Model (log-scale):}
+        \[
+        \log T = f(X,Z) + W\cdot\Bigl(1+0.5\,Z\,X_1\Bigr) + \varepsilon,\quad \varepsilon\sim N(0,\sigma^2).
+        \]
+      \item \textbf{True Function:}
+        \[
+        f(X,Z) = \sin(\pi X_1) + \ln(1+X_2^2) + 2Z\,(X_1X_2) + (X_1^2)Z.
+        \]
+
+      \item \textbf{Censoring:} 
+        \begin{itemize}
+          \item Censoring times \(C \sim \text{Exponential}(\lambda_c)\) (e.g., \(\lambda_c=0.05\)).
+          \item Observed time: \(y = \min(T, C)\) and indicator \(\delta = I(T\le C)\).
+        \end{itemize}
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \begin{table}[ht]
+        \centering
+        \caption{Performance Comparison: SBART vs Cox under Correct and Misspecified Models}
+        \begin{tabular}{|l|l|c|c|c|c|}
+        \hline
+        \textbf{Causal Effect} & \textbf{Metric} & \textbf{SBART (Correct)} & \textbf{SBART (Misspec)} & \textbf{Cox (Correct)} & \textbf{Cox (Misspec)} \\
+        \hline
+        ACE  & Coverage (\%)     & 70.000 & 70.000 & NA & NA \\
+        RACE & Coverage (\%)     & 86.667 & 53.333 & NA & NA \\
+        SPCE & Coverage (\%)     & 80.000 & 36.667 & NA & NA \\
+        \hline
+        ACE  & Absolute Bias     & 1.516  & 7.488  & NA & NA \\
+        RACE & Absolute Bias     & 0.045  & 0.049  & NA & NA \\
+        SPCE & Absolute Bias     & 0.041  & 0.055  & NA & NA \\
+        \hline
+        ACE  & RMSE              & 2.452  & 11.027 & NA & NA \\
+        RACE & RMSE              & 0.121  & 0.096  & NA & NA \\
+        SPCE & RMSE              & 0.066  & 0.071  & NA & NA \\
+        \hline
+        \end{tabular}
+        \end{table}
+  \end{frame}
+
+ 
+
+
+
+
+\end{document}

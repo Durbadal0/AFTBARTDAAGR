@@ -1,0 +1,14 @@
+\begin{figure}
+    \centering
+    \includegraphics[width=1.05\linewidth]{pics/Countyswise_true_survival_sim_A.eps}
+    \caption{The true survival curves for each cluster/county under simulation scenario A. Each plot out of the 10 plots represents the survival curves for a specific county. For each plot, the solid line represents the survival curve for a patient without treatment (Z=0) and all covariates fixed at the respective medians, and the dashed line represents the survival curve for a patient with treatment (Z=1) and all covariates fixed at the respective medians.}
+    \label{fig:TruesurvA}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+    \centering
+    \includegraphics[width=1.05\linewidth]{pics/Countywise_CSPCE_sim_A.eps}
+    \caption{Comparison of the true Conditional Survival Probability Causal Effect (CSPCE) and estimates from two methods, Cox-PH-PS and AFT-BART-PS, across 10 counties. Each panel corresponds to a specific county, with covariates fixed at their median values. The black curve represents the true CSPCE for the county, while the red and blue curves depict the CSPCE estimates obtained using AFT-BART-PS and Cox-PH-PS, respectively. Dashed lines of corresponding colors represent the $95\%$ credible intervals for each method, illustrating the uncertainty in the estimates.}
+    \label{fig:CSPCE}
+\end{figure}

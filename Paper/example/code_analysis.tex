@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Model Specification}
+We assume that for each observation $i$, we observe $y_i$ (possibly censored) and an indicator $\Delta_i$ where:
+\[
+\Delta_i = \begin{cases}
+1, & \text{if } y_i \text{ is observed (uncensored)};\\[1mm]
+0, & \text{if } y_i \text{ is censored.}
+\end{cases}
+\]
+We work on the log-scale by defining a latent variable 
+\[
+\tilde{y}_i = \log(y_i) \quad \text{(or an adjusted value for censored observations).}
+\]
+The regression model is
+\[
+\tilde{y}_i = X_i \beta + r_{c(i)} + \varepsilon_i, \quad \varepsilon_i \sim N(0,\sigma^2),
+\]
+where:
+\begin{itemize}
+  \item $X_i$ is the row vector of covariates for observation $i$.
+  \item $\beta$ is the vector of fixed effects.
+  \item $r_{c(i)}$ is the random effect associated with the cluster $c(i)$ that observation $i$ belongs to.
+  \item $\sigma^2$ is the error variance.
+\end{itemize}
+
+The random effects for each cluster $j=1,\ldots,I$ have a spatial structure through a weight matrix $W$. Let $D_j = \sum_{k=1}^{I} W_{jk}$ be the degree (row sum) for cluster $j$. A spatial prior is imposed by further introducing:
+\begin{itemize}
+  \item $\tau^2$: spatial variance.
+  \item $\rho$: spatial correlation parameter satisfying $\rho \in [\rho_{\text{lower}},\rho_{\text{upper}}]$.
+\end{itemize}
+
+\section*{Gibbs Sampler Steps}
+
+\subsection*{Step 1: Imputation of Latent Variables}
+For each observation $i$, if $\Delta_i = 0$, $\tilde{y}_i$ is missing (censored) and is imputed from a truncated normal distribution:
+\[
+\tilde{y}_i \sim TN\left(a = \log(y_i), \, b = \infty; \, \mu_i, \, \sigma^2\right),
+\]
+with
+\[
+\mu_i = X_i \beta + r_{c(i)}.
+\]
+For uncensored observations ($\Delta_i=1$), we set 
+\[
+\tilde{y}_i = \log(y_i).
+\]
+
+\subsection*{Step 2: Update of $\beta$ (Fixed Effects)}
+Define an adjusted outcome
+\[
+y_i^* = \tilde{y}_i - r_{c(i)}.
+\]
+Assuming a conjugate normal prior for $\beta$, that is,
+\[
+\beta \sim N(0, V_\beta) \quad \text{with } V_\beta=\text{diag}(\beta_{\text{prior_var}}),
+\]
+the posterior for $\beta$ is
+\[
+\beta \mid \tilde{y}, r, \sigma^2 \sim N\left(\mu_\beta,\, V_{\beta}^{\text{post}}\right),
+\]
+where
+\[
+V_{\beta}^{\text{post}} = \left(\frac{X^TX}{\sigma^2} + V_\beta^{-1} \right)^{-1}, \quad
+\mu_\beta = V_{\beta}^{\text{post}} \left(\frac{X^T y^*}{\sigma^2}\right).
+\]
+
+\subsection*{Step 3: Update of Random Effects $r$ for Each Cluster}
+For each cluster $j$, let $C_j$ be the set of observation indices belonging to cluster $j$, and let $n_j = |C_j|$. The full conditional for the random effect $r_j$ is:
+\[
+r_j \mid \cdot \sim N\left(m_j,\, v_j\right),
+\]
+with
+\[
+v_j = \left(\frac{n_j}{\sigma^2} + \frac{D_j}{\tau^2} \right)^{-1}, \quad
+m_j = v_j\left( \frac{1}{\sigma^2} \sum_{i \in C_j} \left(\tilde{y}_i - X_i \beta\right) + \frac{\rho}{\tau^2} \sum_{k=1}^{I} W_{jk} r_k \right).
+\]
+
+\subsection*{Step 4: Update of $\sigma^2$ (Error Variance)}
+The residual for each observation is given by
+\[
+e_i = \tilde{y}_i - X_i\beta - r_{c(i)}.
+\]
+An inverse-gamma prior is assumed for $\sigma^2$. The posterior distribution is
+\[
+\sigma^2 \sim \text{Inv-Gamma}\left(a_{\sigma} + \frac{n}{2}, \; b_{\sigma} + \frac{1}{2} \sum_{i=1}^n e_i^2 \right).
+\]
+
+\subsection*{Step 5: Update of $\tau^2$ (Spatial Variance)}
+Define a quadratic form involving the random effects:
+\[
+Q = \sum_{j=1}^{I} D_j r_j^2 - \rho \, \mathbf{r}^T W \mathbf{r}.
+\]
+Then, with an inverse-gamma prior for $\tau^2$, the full conditional is
+\[
+\tau^2 \sim \text{Inv-Gamma}\left(a_{\tau} + \frac{I}{2}, \; b_{\tau} + \frac{Q}{2}\right).
+\]
+
+\subsection*{Step 6: Update of $\rho$ (Spatial Correlation Parameter)}
+A Metropolis--Hastings step is used for $\rho$. A proposal $\rho_{\text{prop}}$ is drawn from:
+\[
+\rho_{\text{prop}} \sim N(\rho, \, \sigma_{\text{proposal}}^2),
+\]
+with $\sigma_{\text{proposal}} = 0.1$. If $\rho_{\text{prop}}$ is outside the allowable range $[\rho_{\text{lower}},\rho_{\text{upper}}]$, then the proposal is rejected. Otherwise, compute the quadratic forms:
+\[
+Q(\rho) = \sum_{j=1}^{I} D_j r_j^2 - \rho \, \mathbf{r}^T W \mathbf{r},
+\]
+and
+\[
+Q(\rho_{\text{prop}}) = \sum_{j=1}^{I} D_j r_j^2 - \rho_{\text{prop}} \, \mathbf{r}^T W \mathbf{r}.
+\]
+The log acceptance ratio is then given by:
+\[
+\log \alpha = -\frac{1}{2 \tau^2} \left[ Q(\rho_{\text{prop}}) - Q(\rho) \right].
+\]
+Accept $\rho_{\text{prop}}$ with probability $\min(1, \exp(\log \alpha))$, otherwise retain the current $\rho$.
+
+\section*{Summary}
+At each iteration, the sampler:
+\begin{enumerate}
+    \item Imputes latent values $\tilde{y}_i$ for censored observations.
+    \item Updates the fixed effects $\beta$ via a conjugate normal posterior.
+    \item Updates the cluster-level random effects $r_j$ based on the observed data and the spatial structure.
+    \item Updates $\sigma^2$ and $\tau^2$ using inverse-gamma full conditionals.
+    \item Updates $\rho$ using a Metropolis--Hastings step.
+\end{enumerate}
+Posterior samples for all these parameters are stored for later inference.
+
+\end{document}

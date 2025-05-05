@@ -1,0 +1,1239 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{austin2013estimating}{article}{}
+      \name{author}{1}{}{%
+        {{hash=72bb99ace345dcf7ae8b3e877ab1dc2f}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{72bb99ace345dcf7ae8b3e877ab1dc2f}
+      \strng{fullhash}{72bb99ace345dcf7ae8b3e877ab1dc2f}
+      \strng{bibnamehash}{72bb99ace345dcf7ae8b3e877ab1dc2f}
+      \strng{authorbibnamehash}{72bb99ace345dcf7ae8b3e877ab1dc2f}
+      \strng{authornamehash}{72bb99ace345dcf7ae8b3e877ab1dc2f}
+      \strng{authorfullhash}{72bb99ace345dcf7ae8b3e877ab1dc2f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics in Medicine}
+      \field{number}{14}
+      \field{title}{Estimating the hazard ratio in survival analysis using propensity score methods}
+      \field{volume}{32}
+      \field{year}{2013}
+      \field{pages}{2413\bibrangedash 2427}
+      \range{pages}{15}
+    \endentry
+    \entry{austin2016performance}{article}{}
+      \name{author}{2}{}{%
+        {{hash=72bb99ace345dcf7ae8b3e877ab1dc2f}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fca78c8906f27c4bad762b7c564005a6}{%
+           family={Schuster},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a50573279c8035b994ece4afad785510}
+      \strng{fullhash}{a50573279c8035b994ece4afad785510}
+      \strng{bibnamehash}{a50573279c8035b994ece4afad785510}
+      \strng{authorbibnamehash}{a50573279c8035b994ece4afad785510}
+      \strng{authornamehash}{a50573279c8035b994ece4afad785510}
+      \strng{authorfullhash}{a50573279c8035b994ece4afad785510}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics in Medicine}
+      \field{number}{11}
+      \field{title}{The performance of different propensity score methods for estimating absolute effects of treatments on survival outcomes}
+      \field{volume}{35}
+      \field{year}{2016}
+      \field{pages}{1657\bibrangedash 1673}
+      \range{pages}{17}
+    \endentry
+    \entry{austin2017estimating}{article}{}
+      \name{author}{2}{}{%
+        {{hash=72bb99ace345dcf7ae8b3e877ab1dc2f}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=dc9216d91954f9b5dc8d8a294d4c2611}{%
+           family={Stuart},
+           familyi={S\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{fullhash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{bibnamehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{authorbibnamehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{authornamehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{authorfullhash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Methods in Medical Research}
+      \field{number}{6}
+      \field{title}{Estimating the effect of treatment on binary outcomes using full matching on the propensity score}
+      \field{volume}{26}
+      \field{year}{2015}
+      \field{pages}{2505\bibrangedash 2525}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1177/0962280215601134
+      \endverb
+    \endentry
+    \entry{austin2015moving}{article}{}
+      \name{author}{2}{}{%
+        {{hash=72bb99ace345dcf7ae8b3e877ab1dc2f}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=dc9216d91954f9b5dc8d8a294d4c2611}{%
+           family={Stuart},
+           familyi={S\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{fullhash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{bibnamehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{authorbibnamehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{authornamehash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \strng{authorfullhash}{f8b09a43914b5ddd3cbd6c1cb905bffa}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics in Medicine}
+      \field{number}{28}
+      \field{title}{Moving towards best practice when using inverse probability of treatment weighting (IPTW) using the propensity score to estimate causal treatment effects in observational studies}
+      \field{volume}{34}
+      \field{year}{2015}
+      \field{pages}{3661\bibrangedash 3679}
+      \range{pages}{19}
+    \endentry
+    \entry{Chipman10}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9a5a46ea47e9e85dd588a2ed5514d998}{%
+           family={Chipman},
+           familyi={C\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=02b649e33c586c8962f68cf628ee7f8c}{%
+           family={George},
+           familyi={G\bibinitperiod},
+           given={E.I.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=4885f5383c349a4134575a007d30e284}{%
+           family={McCulloch},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{16e8c42bf10fdc18a76ee2355e8b379d}
+      \strng{fullhash}{16e8c42bf10fdc18a76ee2355e8b379d}
+      \strng{bibnamehash}{16e8c42bf10fdc18a76ee2355e8b379d}
+      \strng{authorbibnamehash}{16e8c42bf10fdc18a76ee2355e8b379d}
+      \strng{authornamehash}{16e8c42bf10fdc18a76ee2355e8b379d}
+      \strng{authorfullhash}{16e8c42bf10fdc18a76ee2355e8b379d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Statistics}
+      \field{title}{BART: Bayesian additive regression trees}
+      \field{volume}{4}
+      \field{year}{2010}
+      \field{pages}{266\bibrangedash 298}
+      \range{pages}{33}
+    \endentry
+    \entry{cole2004adjusted}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a7911d3a25201c09da6ba3c1032f4e1b}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=4bfbae7bd65c55b2dceaaa88a09d6acc}{%
+           family={Hernán},
+           familyi={H\bibinitperiod},
+           given={Miguel\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e6c7feb607e01d222e7cb4e50d64466}
+      \strng{fullhash}{2e6c7feb607e01d222e7cb4e50d64466}
+      \strng{bibnamehash}{2e6c7feb607e01d222e7cb4e50d64466}
+      \strng{authorbibnamehash}{2e6c7feb607e01d222e7cb4e50d64466}
+      \strng{authornamehash}{2e6c7feb607e01d222e7cb4e50d64466}
+      \strng{authorfullhash}{2e6c7feb607e01d222e7cb4e50d64466}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Methods and Programs in Biomedicine}
+      \field{number}{1}
+      \field{title}{Adjusted survival curves with inverse probability weights}
+      \field{volume}{75}
+      \field{year}{2004}
+      \field{pages}{45\bibrangedash 49}
+      \range{pages}{5}
+    \endentry
+    \entry{cox1972regression}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5a6db324911af49fd646d312682677b3}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima Roxbee},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{5a6db324911af49fd646d312682677b3}
+      \strng{fullhash}{5a6db324911af49fd646d312682677b3}
+      \strng{bibnamehash}{5a6db324911af49fd646d312682677b3}
+      \strng{authorbibnamehash}{5a6db324911af49fd646d312682677b3}
+      \strng{authornamehash}{5a6db324911af49fd646d312682677b3}
+      \strng{authorfullhash}{5a6db324911af49fd646d312682677b3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society: Series B (Methodological)}
+      \field{number}{2}
+      \field{title}{Regression models and life-tables}
+      \field{volume}{34}
+      \field{year}{1972}
+      \field{pages}{187\bibrangedash 202}
+      \range{pages}{16}
+    \endentry
+    \entry{cui2017causal}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5064bb4f8b13b6a7a1988909722bfd36}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Zhenyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cab7b4f39472e6c01dc0fc30a32c6d89}{%
+           family={Athey},
+           familyi={A\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e22c2c3bb1bd12e43f46c07ea788b581}{%
+           family={Wager},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bf4d202790f3a6aaffe02e394981cc8}
+      \strng{fullhash}{7bf4d202790f3a6aaffe02e394981cc8}
+      \strng{bibnamehash}{7bf4d202790f3a6aaffe02e394981cc8}
+      \strng{authorbibnamehash}{7bf4d202790f3a6aaffe02e394981cc8}
+      \strng{authornamehash}{7bf4d202790f3a6aaffe02e394981cc8}
+      \strng{authorfullhash}{7bf4d202790f3a6aaffe02e394981cc8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 34th International Conference on Machine Learning}
+      \field{title}{Causal forest for survival data}
+      \field{volume}{70}
+      \field{year}{2017}
+      \field{pages}{1142\bibrangedash 1150}
+      \range{pages}{9}
+    \endentry
+    \entry{gayat2012propensity}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9aa5c3c453242c1b9e77752dde9e3dcb}{%
+           family={Gayat},
+           familyi={G\bibinitperiod},
+           given={Etienne},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2af229381a9a125876617c48e7c14bfc}{%
+           family={Resche-Rigon},
+           familyi={R\bibinithyphendelim R\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=41923fad2bc06af9b69f552e6d8c15e5}{%
+           family={Mary},
+           familyi={M\bibinitperiod},
+           given={Jean-Yves},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=5c38c6566ca935cccd795140ecc6a312}{%
+           family={Porcher},
+           familyi={P\bibinitperiod},
+           given={Raphaël},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{2427c44ac1ed89e0ad2949bc354af77d}
+      \strng{fullhash}{8b5521cc25e4303fdaf4265e2d47e953}
+      \strng{bibnamehash}{2427c44ac1ed89e0ad2949bc354af77d}
+      \strng{authorbibnamehash}{2427c44ac1ed89e0ad2949bc354af77d}
+      \strng{authornamehash}{2427c44ac1ed89e0ad2949bc354af77d}
+      \strng{authorfullhash}{8b5521cc25e4303fdaf4265e2d47e953}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pharmaceutical Statistics}
+      \field{number}{3}
+      \field{title}{Propensity score applied to survival data analysis through proportional hazards models: a Monte Carlo study}
+      \field{volume}{11}
+      \field{year}{2012}
+      \field{pages}{222\bibrangedash 229}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1002/pst.529
+      \endverb
+    \endentry
+    \entry{henderson2017bayesian}{article}{}
+      \name{author}{3}{}{%
+        {{hash=532d0adec8dc2b2036bf5f565711fad1}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Noah\bibnamedelima C.},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=662d2718660ba858db6d425307e605e0}{%
+           family={Mallick},
+           familyi={M\bibinitperiod},
+           given={Bani\bibnamedelima K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=54386417e660e92d408b976e858fe972}{%
+           family={Bryant},
+           familyi={B\bibinitperiod},
+           given={Rebecca\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{815eb5d7ebb6672ede14dca4efa6a21b}
+      \strng{fullhash}{815eb5d7ebb6672ede14dca4efa6a21b}
+      \strng{bibnamehash}{815eb5d7ebb6672ede14dca4efa6a21b}
+      \strng{authorbibnamehash}{815eb5d7ebb6672ede14dca4efa6a21b}
+      \strng{authornamehash}{815eb5d7ebb6672ede14dca4efa6a21b}
+      \strng{authorfullhash}{815eb5d7ebb6672ede14dca4efa6a21b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{number}{1}
+      \field{title}{Bayesian additive regression trees for survival analysis}
+      \field{volume}{73}
+      \field{year}{2017}
+      \field{pages}{184\bibrangedash 193}
+      \range{pages}{10}
+    \endentry
+    \entry{hernan2000marginal}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4bfbae7bd65c55b2dceaaa88a09d6acc}{%
+           family={Hernán},
+           familyi={H\bibinitperiod},
+           given={Miguel\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b4734534b3b9358f167f39a35ff189e1}{%
+           family={Brumback},
+           familyi={B\bibinitperiod},
+           given={Babette},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7a2ba958c4a9112b1e74732b9c35f016}{%
+           family={Robins},
+           familyi={R\bibinitperiod},
+           given={James\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{5b36d9041853d1790ee11cb535703ecc}
+      \strng{fullhash}{5b36d9041853d1790ee11cb535703ecc}
+      \strng{bibnamehash}{5b36d9041853d1790ee11cb535703ecc}
+      \strng{authorbibnamehash}{5b36d9041853d1790ee11cb535703ecc}
+      \strng{authornamehash}{5b36d9041853d1790ee11cb535703ecc}
+      \strng{authorfullhash}{5b36d9041853d1790ee11cb535703ecc}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Epidemiology}
+      \field{title}{Marginal structural models to estimate the causal effect of zidovudine on the survival of HIV-positive men}
+      \field{year}{2000}
+      \field{pages}{561\bibrangedash 570}
+      \range{pages}{10}
+    \endentry
+    \entry{hill2011bayesian}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6a4f2b2ea31c7ac9c164764ca3de88b9}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Jennifer\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{6a4f2b2ea31c7ac9c164764ca3de88b9}
+      \strng{fullhash}{6a4f2b2ea31c7ac9c164764ca3de88b9}
+      \strng{bibnamehash}{6a4f2b2ea31c7ac9c164764ca3de88b9}
+      \strng{authorbibnamehash}{6a4f2b2ea31c7ac9c164764ca3de88b9}
+      \strng{authornamehash}{6a4f2b2ea31c7ac9c164764ca3de88b9}
+      \strng{authorfullhash}{6a4f2b2ea31c7ac9c164764ca3de88b9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational and Graphical Statistics}
+      \field{number}{1}
+      \field{title}{Bayesian nonparametric modeling for causal inference}
+      \field{volume}{20}
+      \field{year}{2011}
+      \field{pages}{217\bibrangedash 240}
+      \range{pages}{24}
+    \endentry
+    \entry{hu2021estimating}{article}{}
+      \name{author}{3}{}{%
+        {{hash=676d0385392147c306e3fb51efd3f8a7}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Liangyuan},
+           giveni={L\bibinitperiod}}}%
+        {{hash=64c1fd43f02f043f6b9a273202a2bba7}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Jiayi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=99b3b2e56c8f5ffeb95b882b3da68136}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{064c1f5551b5ca4232854bfa108060ca}
+      \strng{fullhash}{064c1f5551b5ca4232854bfa108060ca}
+      \strng{bibnamehash}{064c1f5551b5ca4232854bfa108060ca}
+      \strng{authorbibnamehash}{064c1f5551b5ca4232854bfa108060ca}
+      \strng{authornamehash}{064c1f5551b5ca4232854bfa108060ca}
+      \strng{authorfullhash}{064c1f5551b5ca4232854bfa108060ca}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics in Medicine}
+      \field{number}{21}
+      \field{title}{Estimating heterogeneous survival treatment effect in observational data using machine learning}
+      \field{volume}{40}
+      \field{year}{2021}
+      \field{pages}{4691\bibrangedash 4713}
+      \range{pages}{23}
+    \endentry
+    \entry{Ishwaran08}{article}{}
+      \name{author}{4}{}{%
+        {{hash=01ac834cae76b7edc44968f1597d75a4}{%
+           family={Ishwaran},
+           familyi={I\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=860c16b1b29b20683f0b9f286683ea71}{%
+           family={Kogalur},
+           familyi={K\bibinitperiod},
+           given={U.\bibnamedelimi B.},
+           giveni={U\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=50714df99372f0d211227650065f7636}{%
+           family={Blackstone},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a1cb0ea7de0520c52f82cdc2532efa69}{%
+           family={Lauer},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7eb6e80d25374b17d2f56b4b969edf02}
+      \strng{fullhash}{3374c3343bf29857e11a74ae6e56f8a0}
+      \strng{bibnamehash}{7eb6e80d25374b17d2f56b4b969edf02}
+      \strng{authorbibnamehash}{7eb6e80d25374b17d2f56b4b969edf02}
+      \strng{authornamehash}{7eb6e80d25374b17d2f56b4b969edf02}
+      \strng{authorfullhash}{3374c3343bf29857e11a74ae6e56f8a0}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Applied Statistics}
+      \field{title}{Random survival forests}
+      \field{volume}{2(3)}
+      \field{year}{2008}
+      \field{pages}{841\bibrangedash 860}
+      \range{pages}{20}
+    \endentry
+    \entry{katzman2018deep}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2d3a596db334cc46b10bd34365ca51b3}{%
+           family={Katzman},
+           familyi={K\bibinitperiod},
+           given={Jared\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=d66633b9b663786414176ec27f8b6a92}{%
+           family={Shaham},
+           familyi={S\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+        {{hash=9d7af19d004c456f9e01341b171f173d}{%
+           family={Cloninger},
+           familyi={C\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ff221a092aaf6c9c9bd052a1824a0f1b}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c000f2d686c6fa4b94d8431f81320b45}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=387c6ec16419239b8c07e352ad96c608}{%
+           family={Kluger},
+           familyi={K\bibinitperiod},
+           given={Yitzhak},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{76e0d0facb563d87b301256de42cf989}
+      \strng{fullhash}{ee32beba76fd218669a78183bff566bf}
+      \strng{bibnamehash}{76e0d0facb563d87b301256de42cf989}
+      \strng{authorbibnamehash}{76e0d0facb563d87b301256de42cf989}
+      \strng{authornamehash}{76e0d0facb563d87b301256de42cf989}
+      \strng{authorfullhash}{ee32beba76fd218669a78183bff566bf}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Medical Research Methodology}
+      \field{title}{DeepSurv: personalized treatment recommender system using a Cox proportional hazards deep neural network}
+      \field{volume}{18}
+      \field{year}{2018}
+      \field{pages}{24}
+      \range{pages}{1}
+    \endentry
+    \entry{kim2013bayesian}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6b3b1e8cd4e1f7a7a6d59d3d9e04d10b}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jae\bibnamedelima Kwang},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=692a1cdbb4796afb2781c28ba2ace7e5}{%
+           family={DeYoreo},
+           familyi={D\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8535a4819b49063b796fa1b0293f1015}{%
+           family={Meza},
+           familyi={M\bibinitperiod},
+           given={Raul},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{235e133e5d574b9fc3979a1c1cd4060d}
+      \strng{fullhash}{235e133e5d574b9fc3979a1c1cd4060d}
+      \strng{bibnamehash}{235e133e5d574b9fc3979a1c1cd4060d}
+      \strng{authorbibnamehash}{235e133e5d574b9fc3979a1c1cd4060d}
+      \strng{authornamehash}{235e133e5d574b9fc3979a1c1cd4060d}
+      \strng{authorfullhash}{235e133e5d574b9fc3979a1c1cd4060d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{504}
+      \field{title}{Bayesian nonparametric analysis of competing risks data with missing cause of failure}
+      \field{volume}{108}
+      \field{year}{2013}
+      \field{pages}{1762\bibrangedash 1771}
+      \range{pages}{10}
+    \endentry
+    \entry{kvamme2019time}{article}{}
+      \name{author}{3}{}{%
+        {{hash=551ba23d97090f72de7fa05ad772800a}{%
+           family={Kvamme},
+           familyi={K\bibinitperiod},
+           given={Håvard},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c139efb0da243f46883aec09e03812d0}{%
+           family={Borgan},
+           familyi={B\bibinitperiod},
+           given={Ørnulf},
+           giveni={Ø\bibinitperiod}}}%
+        {{hash=8bf32bf99b09a8e476fe69087ddc6d8c}{%
+           family={Scheel},
+           familyi={S\bibinitperiod},
+           given={Ida},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{258e3d3263e6f33cf454a627a87a8e58}
+      \strng{fullhash}{258e3d3263e6f33cf454a627a87a8e58}
+      \strng{bibnamehash}{258e3d3263e6f33cf454a627a87a8e58}
+      \strng{authorbibnamehash}{258e3d3263e6f33cf454a627a87a8e58}
+      \strng{authornamehash}{258e3d3263e6f33cf454a627a87a8e58}
+      \strng{authorfullhash}{258e3d3263e6f33cf454a627a87a8e58}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{1}
+      \field{title}{Time-to-event prediction with neural networks and Cox regression}
+      \field{volume}{20}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+    \endentry
+    \entry{van2000targeted}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d1d9714d48a0b28418307c19bfd94c0e}{%
+           family={Laan},
+           familyi={L\bibinitperiod},
+           given={Mark\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=7b2c851270ae31fff3b8431d493e9fc8}{%
+           family={Rose},
+           familyi={R\bibinitperiod},
+           given={Sherri},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{175437ee308e5008a16fd353896e6e6b}
+      \strng{fullhash}{175437ee308e5008a16fd353896e6e6b}
+      \strng{bibnamehash}{175437ee308e5008a16fd353896e6e6b}
+      \strng{authorbibnamehash}{175437ee308e5008a16fd353896e6e6b}
+      \strng{authornamehash}{175437ee308e5008a16fd353896e6e6b}
+      \strng{authorfullhash}{175437ee308e5008a16fd353896e6e6b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Targeted Learning: Causal Inference for Observational and Experimental Data}
+      \field{year}{2011}
+    \endentry
+    \entry{lee2020causal}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c63dc9fcb3cf6a9197458474e3ccf26b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=cfce3e5bbe8ee1a02d1d8a711a39f106}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=4fb2c8e2e2789d8d4cc6cfc3b865f670}{%
+           family={Hendriksen},
+           familyi={H\bibinitperiod},
+           given={Arie},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e2b133febe716ae7e59be924167998c}
+      \strng{fullhash}{3e2b133febe716ae7e59be924167998c}
+      \strng{bibnamehash}{3e2b133febe716ae7e59be924167998c}
+      \strng{authorbibnamehash}{3e2b133febe716ae7e59be924167998c}
+      \strng{authornamehash}{3e2b133febe716ae7e59be924167998c}
+      \strng{authorfullhash}{3e2b133febe716ae7e59be924167998c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Networks}
+      \field{title}{Deep learning-based survival causal inference: DR-DL and DL-BJ models}
+      \field{volume}{128}
+      \field{year}{2020}
+      \field{pages}{19\bibrangedash 35}
+      \range{pages}{17}
+    \endentry
+    \entry{li2023bayesian}{article}{}
+      \name{author}{3}{}{%
+        {{hash=99b3b2e56c8f5ffeb95b882b3da68136}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=284b1660e81956ee8b9e73c17795c851}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1dcb46aac9c02eeee16fbcd79cffaa83}{%
+           family={Mealli},
+           familyi={M\bibinitperiod},
+           given={Fabrizia},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Royal Society}%
+      }
+      \strng{namehash}{2911a0741b5466dcdcba848c7803cf2d}
+      \strng{fullhash}{2911a0741b5466dcdcba848c7803cf2d}
+      \strng{bibnamehash}{2911a0741b5466dcdcba848c7803cf2d}
+      \strng{authorbibnamehash}{2911a0741b5466dcdcba848c7803cf2d}
+      \strng{authornamehash}{2911a0741b5466dcdcba848c7803cf2d}
+      \strng{authorfullhash}{2911a0741b5466dcdcba848c7803cf2d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{number}{2247}
+      \field{title}{Bayesian causal inference: A critical review}
+      \field{volume}{381}
+      \field{year}{2023}
+      \field{pages}{20220153}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1098/rsta.2022.0153
+      \endverb
+    \endentry
+    \entry{linero2022causal}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f47faa6f3dd32ae8a24a5aca4e4a00db}{%
+           family={Linero},
+           familyi={L\bibinitperiod},
+           given={Antonio\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=68194fa0580c86346d9a3c895e42a6b0}{%
+           family={Antonelli},
+           familyi={A\bibinitperiod},
+           given={Joseph\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{51a093b3d298aa11b371607461a2eac0}
+      \strng{fullhash}{51a093b3d298aa11b371607461a2eac0}
+      \strng{bibnamehash}{51a093b3d298aa11b371607461a2eac0}
+      \strng{authorbibnamehash}{51a093b3d298aa11b371607461a2eac0}
+      \strng{authornamehash}{51a093b3d298aa11b371607461a2eac0}
+      \strng{authorfullhash}{51a093b3d298aa11b371607461a2eac0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WIREs Computational Statistics}
+      \field{number}{1}
+      \field{title}{The how and why of Bayesian nonparametric causal inference}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{e1583}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1002/wics.1583
+      \endverb
+    \endentry
+    \entry{neyman1923application}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2e9a89bf0a1281de5b3c321d52d56b73}{%
+           family={Neyman},
+           familyi={N\bibinitperiod},
+           given={Jerzy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{2e9a89bf0a1281de5b3c321d52d56b73}
+      \strng{fullhash}{2e9a89bf0a1281de5b3c321d52d56b73}
+      \strng{bibnamehash}{2e9a89bf0a1281de5b3c321d52d56b73}
+      \strng{authorbibnamehash}{2e9a89bf0a1281de5b3c321d52d56b73}
+      \strng{authornamehash}{2e9a89bf0a1281de5b3c321d52d56b73}
+      \strng{authorfullhash}{2e9a89bf0a1281de5b3c321d52d56b73}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{4}
+      \field{title}{On the application of probability theory to agricultural experiments: Essay on principles. Section 9}
+      \field{volume}{5}
+      \field{year}{1990}
+      \field{pages}{465\bibrangedash 472}
+      \range{pages}{8}
+    \endentry
+    \entry{robins1992recovery}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7a2ba958c4a9112b1e74732b9c35f016}{%
+           family={Robins},
+           familyi={R\bibinitperiod},
+           given={James\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d9a46cb18c56533313e7487a209a6a80}{%
+           family={Finkelstein},
+           familyi={F\bibinitperiod},
+           given={David\bibnamedelima M},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{19a6fe2c22856c3099653897202353b6}
+      \strng{fullhash}{19a6fe2c22856c3099653897202353b6}
+      \strng{bibnamehash}{19a6fe2c22856c3099653897202353b6}
+      \strng{authorbibnamehash}{19a6fe2c22856c3099653897202353b6}
+      \strng{authornamehash}{19a6fe2c22856c3099653897202353b6}
+      \strng{authorfullhash}{19a6fe2c22856c3099653897202353b6}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{418}
+      \field{title}{Recovery of information and adjustment for dependent censoring using surrogate markers}
+      \field{volume}{87}
+      \field{year}{1992}
+      \field{pages}{402\bibrangedash 411}
+      \range{pages}{10}
+    \endentry
+    \entry{rubin1974estimating}{article}{}
+      \name{author}{1}{}{%
+        {{hash=49a367b6280de8a239f8bbdd573f996f}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{fullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{bibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorbibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authornamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorfullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Educational Psychology}
+      \field{number}{5}
+      \field{title}{Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies}
+      \field{volume}{66}
+      \field{year}{1974}
+      \field{pages}{688\bibrangedash 701}
+      \range{pages}{14}
+    \endentry
+    \entry{rubin1985propensity}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=49a367b6280de8a239f8bbdd573f996f}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam; New York}%
+      }
+      \list{publisher}{1}{%
+        {North-Holland/Elsevier}%
+      }
+      \strng{namehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{fullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{bibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorbibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authornamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorfullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Bayesian Statistics 2}
+      \field{title}{The Use of Propensity Scores in Applied Bayesian Inference}
+      \field{year}{1985}
+      \field{pages}{463\bibrangedash 472}
+      \range{pages}{10}
+    \endentry
+    \entry{shen2018personalized}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f7a9e5c9a85f9ca63ca34486fcbabaad}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Changchun},
+           giveni={C\bibinitperiod}}}%
+        {{hash=df428416bb33b1ea50cc8131fd7dd043}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e6cd7e48965d8940bf397276abafb62b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Lifeng},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc8c3cdc0f2405997154912386de6bc8}
+      \strng{fullhash}{bc8c3cdc0f2405997154912386de6bc8}
+      \strng{bibnamehash}{bc8c3cdc0f2405997154912386de6bc8}
+      \strng{authorbibnamehash}{bc8c3cdc0f2405997154912386de6bc8}
+      \strng{authornamehash}{bc8c3cdc0f2405997154912386de6bc8}
+      \strng{authorfullhash}{bc8c3cdc0f2405997154912386de6bc8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{number}{4}
+      \field{title}{Personalized treatment rules for right-censored survival data with a weighted random forest approach}
+      \field{volume}{74}
+      \field{year}{2018}
+      \field{pages}{1366\bibrangedash 1376}
+      \range{pages}{11}
+    \endentry
+    \entry{sugihara2010survival}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e558d0335a8d73a1040a00f5da4ff02e}{%
+           family={Sugihara},
+           familyi={S\bibinitperiod},
+           given={Mayuko},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e558d0335a8d73a1040a00f5da4ff02e}
+      \strng{fullhash}{e558d0335a8d73a1040a00f5da4ff02e}
+      \strng{bibnamehash}{e558d0335a8d73a1040a00f5da4ff02e}
+      \strng{authorbibnamehash}{e558d0335a8d73a1040a00f5da4ff02e}
+      \strng{authornamehash}{e558d0335a8d73a1040a00f5da4ff02e}
+      \strng{authorfullhash}{e558d0335a8d73a1040a00f5da4ff02e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pharmaceutical Statistics}
+      \field{number}{1}
+      \field{title}{Survival analysis using inverse probability of treatment weighted methods based on the generalized propensity score}
+      \field{volume}{9}
+      \field{year}{2010}
+      \field{pages}{21\bibrangedash 34}
+      \range{pages}{14}
+    \endentry
+    \entry{tabib2018splitting}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a7d1b4d8ea7b1d1e2814ee2853deffba}{%
+           family={Tabib},
+           familyi={T\bibinitperiod},
+           given={Sina},
+           giveni={S\bibinitperiod}}}%
+        {{hash=88982a5043d546df81aba8e560afcb29}{%
+           family={Larocque},
+           familyi={L\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{26586b9be1f9c524d86a7f1c80a82839}
+      \strng{fullhash}{26586b9be1f9c524d86a7f1c80a82839}
+      \strng{bibnamehash}{26586b9be1f9c524d86a7f1c80a82839}
+      \strng{authorbibnamehash}{26586b9be1f9c524d86a7f1c80a82839}
+      \strng{authornamehash}{26586b9be1f9c524d86a7f1c80a82839}
+      \strng{authorfullhash}{26586b9be1f9c524d86a7f1c80a82839}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Methods in Medical Research}
+      \field{number}{3}
+      \field{title}{A new splitting criterion for random survival forests}
+      \field{volume}{27}
+      \field{year}{2018}
+      \field{pages}{685\bibrangedash 698}
+      \range{pages}{14}
+    \endentry
+    \entry{tian2014survival}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c1e94d69d00ff9962d0675a90adaa7d5}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=08796c47da6d86b3e2d86f57891ed86f}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Hongyu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7e97ec47e5729319ac50e9336f17e8a6}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Lee-Jen},
+           giveni={L\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c895e72cfaa0de94c2e9f6769be12a2d}
+      \strng{fullhash}{c895e72cfaa0de94c2e9f6769be12a2d}
+      \strng{bibnamehash}{c895e72cfaa0de94c2e9f6769be12a2d}
+      \strng{authorbibnamehash}{c895e72cfaa0de94c2e9f6769be12a2d}
+      \strng{authornamehash}{c895e72cfaa0de94c2e9f6769be12a2d}
+      \strng{authorfullhash}{c895e72cfaa0de94c2e9f6769be12a2d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{number}{4}
+      \field{title}{A model-free approach to identify risk-modifying variables in randomized clinical trials}
+      \field{volume}{70}
+      \field{year}{2014}
+      \field{pages}{854\bibrangedash 865}
+      \range{pages}{12}
+    \endentry
+    \entry{wager2018estimation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e22c2c3bb1bd12e43f46c07ea788b581}{%
+           family={Wager},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cab7b4f39472e6c01dc0fc30a32c6d89}{%
+           family={Athey},
+           familyi={A\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4c64d08a4af7035a4061fd6e82a6d2d}
+      \strng{fullhash}{d4c64d08a4af7035a4061fd6e82a6d2d}
+      \strng{bibnamehash}{d4c64d08a4af7035a4061fd6e82a6d2d}
+      \strng{authorbibnamehash}{d4c64d08a4af7035a4061fd6e82a6d2d}
+      \strng{authornamehash}{d4c64d08a4af7035a4061fd6e82a6d2d}
+      \strng{authorfullhash}{d4c64d08a4af7035a4061fd6e82a6d2d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{523}
+      \field{title}{Estimation and Inference of Heterogeneous Treatment Effects Using Random Forests}
+      \field{volume}{113}
+      \field{year}{2018}
+      \field{pages}{1228\bibrangedash 1242}
+      \range{pages}{15}
+    \endentry
+    \entry{xie2005adjusted}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c77ea550c7e62a3d99bc4566ec8bf281}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3539710aa42121e37431f6786a50468b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Chunxiao},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b2a5910aadc7840bdab3a71494370d8b}
+      \strng{fullhash}{b2a5910aadc7840bdab3a71494370d8b}
+      \strng{bibnamehash}{b2a5910aadc7840bdab3a71494370d8b}
+      \strng{authorbibnamehash}{b2a5910aadc7840bdab3a71494370d8b}
+      \strng{authornamehash}{b2a5910aadc7840bdab3a71494370d8b}
+      \strng{authorfullhash}{b2a5910aadc7840bdab3a71494370d8b}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics in Medicine}
+      \field{number}{20}
+      \field{title}{Adjusted Kaplan-Meier estimator and log-rank test with inverse probability of treatment weighting for survival data}
+      \field{volume}{24}
+      \field{year}{2005}
+      \field{pages}{3089\bibrangedash 3110}
+      \range{pages}{22}
+    \endentry
+    \entry{xu2010estimating}{article}{}
+      \name{author}{6}{}{%
+        {{hash=ac9df93e1d0d44a75ad03476575d13e3}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shanshan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9080f1afcfd81f40b0c5f11e9df8cc18}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={Casey},
+           giveni={C\bibinitperiod}}}%
+        {{hash=98bf5cd1bbacc4ccd07419cbc6f7c13e}{%
+           family={Raebel},
+           familyi={R\bibinitperiod},
+           given={Marsha\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2bd555de4ffc47e89d7d2bfcd691f2fc}{%
+           family={Shetterly},
+           familyi={S\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f63474bbbc94ed8228c3163f375233d0}{%
+           family={Blanchette},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5dae92275f3afda5b0b3da88efb93844}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9942644d1513533cf94c84f3fdca120}
+      \strng{fullhash}{a9d35f42b9219d04443b1081251b4826}
+      \strng{bibnamehash}{f9942644d1513533cf94c84f3fdca120}
+      \strng{authorbibnamehash}{f9942644d1513533cf94c84f3fdca120}
+      \strng{authornamehash}{f9942644d1513533cf94c84f3fdca120}
+      \strng{authorfullhash}{a9d35f42b9219d04443b1081251b4826}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics in Medicine}
+      \field{number}{7-8}
+      \field{title}{Estimating stabilized inverse probability weights for time-varying treatments using the generalized propensity score}
+      \field{volume}{29}
+      \field{year}{2010}
+      \field{pages}{780\bibrangedash 791}
+      \range{pages}{12}
+    \endentry
+    \entry{xu2017bayesian}{article}{}
+      \name{author}{3}{}{%
+        {{hash=479f4878133307a61ba55c32ecceda92}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yawen},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=07e2b57b1d5830aa04444bd2a4cba3d6}{%
+           family={Reich},
+           familyi={R\bibinitperiod},
+           given={Brian\bibnamedelima J},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=812108e097d99a555e5eb0e553806e2e}{%
+           family={Ghosal},
+           familyi={G\bibinitperiod},
+           given={Subhashis},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{23765d84be9e8b43c42341fb56f9e82e}
+      \strng{fullhash}{23765d84be9e8b43c42341fb56f9e82e}
+      \strng{bibnamehash}{23765d84be9e8b43c42341fb56f9e82e}
+      \strng{authorbibnamehash}{23765d84be9e8b43c42341fb56f9e82e}
+      \strng{authornamehash}{23765d84be9e8b43c42341fb56f9e82e}
+      \strng{authorfullhash}{23765d84be9e8b43c42341fb56f9e82e}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{number}{2}
+      \field{title}{Bayesian nonparametric modeling of survival data using Gaussian processes}
+      \field{volume}{73}
+      \field{year}{2017}
+      \field{pages}{707\bibrangedash 715}
+      \range{pages}{9}
+    \endentry
+    \entry{zigler2013model}{article}{}
+      \name{author}{6}{}{%
+        {{hash=9459317b55502d3b1fce6d1c8c7dfdab}{%
+           family={Zigler},
+           familyi={Z\bibinitperiod},
+           given={Corwin\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=89888ee20a8b54baa4ac2f42cb185c89}{%
+           family={Watts},
+           familyi={W\bibinitperiod},
+           given={Kristen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=13af632da938501dc37ea0d7735b6081}{%
+           family={Yeh},
+           familyi={Y\bibinitperiod},
+           given={Robert\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=8e448470980462cb6c82de10f864754c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=8e26d8393e79ffc53d178661e549591e}{%
+           family={Coull},
+           familyi={C\bibinitperiod},
+           given={Brent\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f3c8643c576bade6dbc125562e719399}{%
+           family={Dominici},
+           familyi={D\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{7a7a706078beaf2f93ef217a6e573c86}
+      \strng{fullhash}{4ddc2df031292697039bd2c5386770fd}
+      \strng{bibnamehash}{7a7a706078beaf2f93ef217a6e573c86}
+      \strng{authorbibnamehash}{7a7a706078beaf2f93ef217a6e573c86}
+      \strng{authornamehash}{7a7a706078beaf2f93ef217a6e573c86}
+      \strng{authorfullhash}{4ddc2df031292697039bd2c5386770fd}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{number}{1}
+      \field{title}{Model feedback in Bayesian propensity score estimation}
+      \field{volume}{69}
+      \field{year}{2013}
+      \field{pages}{263\bibrangedash 273}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1111/j.1541-0420.2012.01830.x
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

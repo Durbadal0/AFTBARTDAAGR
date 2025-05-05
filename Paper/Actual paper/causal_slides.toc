@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Methods}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Method}{11}{0}{1}
+\beamer@subsectionintoc {1}{2}{Full Conditionals}{19}{0}{1}
+\beamer@subsectionintoc {1}{3}{Posterior Inference of Causal Effects}{27}{0}{1}
+\beamer@sectionintoc {2}{Simulations}{33}{0}{2}
